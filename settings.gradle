@@ -1,0 +1,19 @@
+pluginManagement {
+    repositories {
+        // 腾讯云 Gradle 插件镜像（加速国内下载）
+        maven {
+            name = "Tencent Cloud Gradle Plugins"
+            url = "https://mirrors.cloud.tencent.com/gradle-plugins/"
+        }
+        // NeoForge CDN 镜像（resolve moddev 系列插件，含 plugin marker artifacts）
+        maven {
+            name = "NeoForged CDN"
+            url = "https://neoforged.forgecdn.net/releases/"
+        }
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
+}
